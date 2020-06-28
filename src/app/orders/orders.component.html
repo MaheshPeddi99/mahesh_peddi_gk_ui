@@ -1,0 +1,14 @@
+<div class="table">
+  <div class="table-row">
+    <div class="table-head">Customer</div>
+    <div class="table-head">Order Date</div>
+    <div class="table-head">Order Detail</div>
+    <div class="table-head">Order Amount</div>
+  </div>
+  <div class="table-row" *ngFor="let order of orders">
+    <div class="table-cell">{{order?.customer?.customerName}}</div>
+    <div class="table-cell">{{order.orderDate | date}}</div>
+    <div class="table-cell">{{order.orderDetail}}</div>
+    <div class="table-cell">{{order.orderAmount}}</div>
+  </div>
+</div>

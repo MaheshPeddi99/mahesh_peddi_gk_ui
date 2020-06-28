@@ -1,0 +1,14 @@
+<div class="customer-page">
+  <div class="form">
+    <form class="login-form" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Customer Name" formControlName="customerName" />
+      <input type="number" placeholder="Age" formControlName="customerAge" min="1" />
+      <textarea placeholder="Address" formControlName="customerAddress"></textarea>
+      <div class="button-container">
+        <button type="reset">cancel</button>
+        <span class="spacer"></span>
+        <button type="submit" [disabled]="!(customerForm.valid)">save</button>
+      </div>
+    </form>
+  </div>
+</div>

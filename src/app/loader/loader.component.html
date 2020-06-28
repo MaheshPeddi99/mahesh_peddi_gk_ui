@@ -1,0 +1,10 @@
+<!-- <div [class.hidden]="!show">
+  <div class="loader-overlay">
+    <div *ngIf="show" class="loader"></div>
+  </div>
+</div> -->
+<div class="spinner-bg" *ngIf="show">
+  <div class="spinner">
+    <mat-spinner diameter="50" *ngIf="show"></mat-spinner>
+  </div>
+</div>

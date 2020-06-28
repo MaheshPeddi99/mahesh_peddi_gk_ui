@@ -1,0 +1,19 @@
+<div class="main-toolbar" role="banner">
+  <div class="spacer"></div>
+  Green Koncepts
+  <div class="spacer"></div>
+</div>
+<div class="toolbar" role="banner">
+  <span class="navigation-button" *ngIf="routeData?.showBack" (click)="navigateTo('previous')">
+    Back
+  </span>
+  <div class="spacer"></div>
+  <span>
+    {{routeData?.title}}
+  </span>
+  <div class="spacer"></div>
+  <span *ngIf="routeData?.showBack">
+    <span>[{{userInfo?.username}}] </span>
+    <span class="navigation-button" (click)="navigateTo('login')"> Logout</span>
+  </span>
+</div>
